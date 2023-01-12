@@ -1,0 +1,29 @@
+.user-profile {
+    padding: 0 20px 20px 20px;
+    display: flex;
+  }
+  
+  .user-profile__info-wrapper {
+    padding: 0 20px 20px 20px;
+  }
+  
+  .user-profile__name {
+    margin: 0 0 20px 0;
+  }
+  
+  .user-profile__description-list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+  }
+  
+  .user-profile__description-key {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .user-profile__description-value {
+    margin: 0;
+    padding: 0;
+  }

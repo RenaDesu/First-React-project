@@ -1,0 +1,18 @@
+.user-post__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+  
+  .user-post__post {
+    min-width: 345px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-post__icon {
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    background-image: linear-gradient(rgb(175, 100, 245) 0%, rgb(160, 73, 242) 75%, blueviolet 100%);
+    border-radius: 4px;
+  }

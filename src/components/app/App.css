@@ -1,0 +1,12 @@
+.app-wrapper {
+  width: 1280px;
+  min-height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+}
+
+
+

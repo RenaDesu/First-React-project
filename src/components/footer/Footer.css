@@ -1,0 +1,7 @@
+.main-footer {
+  min-height: 80px;
+  grid-column: 1 / -1;
+  background-color: blueviolet;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}

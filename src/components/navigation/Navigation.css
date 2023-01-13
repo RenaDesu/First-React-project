@@ -15,14 +15,29 @@
     list-style-type: none;
   }
   
+.main-nav__list-item {
+  width: 214px;
+  padding: 10px 0 10px 0;
+  border-radius: 4px;
+}
+
   .main-nav__list-item:not(:last-child) {
     margin-bottom: 10px;
   }
+
+  .main-nav__list-item--current {
+    background-image: linear-gradient(rgb(175, 100, 245) 0%, rgb(160, 73, 242) 75%, blueviolet 100%);
+  }
   
   .main-nav__list-item a {
+    padding: 10px 0 10px 10px;
     text-decoration: none;
     color: #fff;
   }
+
+  .main-nav__settings-item {
+    padding: 10px 0 10px 10px;
+  } 
   
   .main-nav__settings-item a {
     text-decoration: none;

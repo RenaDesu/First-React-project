@@ -1,9 +1,14 @@
 import './UserPost.css';
 
-const UserPost = () => {
+const UserPost = (props) => {
     return (
         <li className='user-post__item'>
-            <p className='user-post__post'> <span className='user-post__icon'></span> О том, как я провел этот день.</p>
+            <p className='user-post__post'>
+                <span className='user-post__icon'></span>
+                {props.message}
+                <span className='user-post__like-icon'></span><span className='user-post__likes-count'> {props.likesCount} </span>
+            </p>
+
         </li>
     );
 }

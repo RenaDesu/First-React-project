@@ -4,15 +4,24 @@
   
   .user-post__post {
     min-width: 345px;
-    margin: 0;
-    display: flex;
+    margin: 0 0 5px 0;
+    display: grid;
+    grid-template-columns: 65px 650px 50px 50px;
     align-items: center;
   }
   
   .user-post__icon {
     width: 45px;
     height: 45px;
-    margin-right: 20px;
     background-image: linear-gradient(rgb(175, 100, 245) 0%, rgb(160, 73, 242) 75%, blueviolet 100%);
     border-radius: 4px;
+  }
+
+  .user-post__like-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .user-post__likes-count {
+    font-weight: 700;
   }

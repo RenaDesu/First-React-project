@@ -1,0 +1,8 @@
+.chat-list__message {
+    width: 340px;
+    padding: 20px;
+}
+
+.chat-list__message-text {
+    margin: 0;
+}

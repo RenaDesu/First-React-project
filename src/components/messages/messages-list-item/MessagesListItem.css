@@ -1,0 +1,8 @@
+.messages-list__item {
+    width: 240px;
+    padding: 10px;
+}
+
+.messages-list__chat {
+    margin: 0;
+}

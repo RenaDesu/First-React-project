@@ -1,16 +1,14 @@
 import './Profile.css';
-import UserNews from './user-news/UserNews';
 import UserProfile from './user-profile/UserProfile';
 import UserPosts from './user-posts/UserPosts';
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <main className='main-content'>
             <div className='banner'>
             </div>
             <UserProfile />
-            <UserNews />
-            <UserPosts />
+            <UserPosts posts={props.posts} addPost={props.addPost} />
         </main>
     );
 }

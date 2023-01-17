@@ -11,6 +11,7 @@ let newPostElement = React.createRef();
 let addPost = () => {
     let text = newPostElement.current.value;
     props.addPost(text);
+    newPostElement.current.value = '';
 }
 
     return (
@@ -19,7 +20,7 @@ let addPost = () => {
             <h2 className='user-posts__title'>Мои посты</h2>
             <form className='user-posts__form'>
                 <textarea className='user-posts__comment-field' ref={newPostElement} name="news" id="news" placeholder='Какие новости?'></textarea>
-                <button className='user-posts__button' onClick={addPost} >Отправить</button>
+                <button className='user-posts__button' onClick={addPost} type='button' >Отправить</button>
             </form>
         </div>
         <div className='user-posts__posts-wrapper'>

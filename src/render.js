@@ -6,7 +6,7 @@ import { addPost } from './state/state';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-export let rerenderEntireTree = (state) => {
+export let renderEntireTree = (state) => {
   root.render(
   <React.StrictMode>
     <App state={state} addPost={addPost} />

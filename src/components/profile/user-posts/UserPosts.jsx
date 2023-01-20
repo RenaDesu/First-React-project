@@ -9,9 +9,12 @@ let postsElements = props.posts.map( post => <UserPost message={post.message} li
 let newPostElement = React.createRef();
 
 let addPost = () => {
+    props.addPost();
+}
+
+let onPostChange = () => {
     let text = newPostElement.current.value;
-    props.addPost(text);
-    newPostElement.current.value = '';
+    props.updateNewPostText(text);
 }
 
     return (
@@ -19,7 +22,7 @@ let addPost = () => {
         <div className='user-posts__textfield-wrapper'>
             <h2 className='user-posts__title'>Мои посты</h2>
             <form className='user-posts__form'>
-                <textarea className='user-posts__comment-field' ref={newPostElement} name="news" id="news" placeholder='Какие новости?'></textarea>
+                <textarea className='user-posts__comment-field' onChange={onPostChange} ref={newPostElement} name="news-field" id="news-field" value={props.newPostText} placeholder='Какие новости?'></textarea>
                 <button className='user-posts__button' onClick={addPost} type='button' >Отправить</button>
             </form>
         </div>

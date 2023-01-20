@@ -8,7 +8,7 @@ const Profile = (props) => {
             <div className='banner'>
             </div>
             <UserProfile />
-            <UserPosts posts={props.posts} addPost={props.addPost} />
+            <UserPosts posts={props.posts} addPost={props.addPost} newPostText={props.newPostText} updateNewPostText={props.updateNewPostText} />
         </main>
     );
 }

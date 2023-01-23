@@ -6,7 +6,7 @@ import Footer from '../footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Messages from '../messages/Messages';
 import News from '../news/News';
-import Music from '../musc/Music';
+import Music from '../music/Music';
 import Settings from '../settings/Settings';
 
 const App = (props) => {

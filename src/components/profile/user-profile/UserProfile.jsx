@@ -5,7 +5,7 @@ const UserProfile = () => {
         <div className='user-profile'>
             <img className='user-profile__image' src='#' alt='Фото пользователя.' />
             <div className='user-profile__info-wrapper'>
-                <h2 className='user-profile__name'>Максимилиан Волошин</h2>
+                <h2 className='user-profile__name'>Макс</h2>
                 <dl className='user-profile__description-list'>
                     <dt className='user-profile__description-key'>Дата рождения:</dt>
                     <dd className='user-profile__description-value'>15 января</dd>

@@ -2,7 +2,7 @@ import React from 'react';
 import ChatMessage from './chat-message/ChatMessage';
 import MessagesListItem from './messages-list-item/MessagesListItem';
 import './Messages.css';
-import { updateNewMessageTextCreator, sendMessageCreator } from '../../state/messages-reducer';
+import { updateNewMessageTextCreator, sendMessageCreator } from '../../redux/messages-reducer';
 
 const Messages = (props) => {
 

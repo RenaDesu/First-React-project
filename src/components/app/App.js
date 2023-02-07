@@ -4,10 +4,10 @@ import Navigation from '../navigation/Navigation';
 import Profile from '../profile/Profile';
 import Footer from '../footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Messages from '../messages/Messages';
 import News from '../news/News';
 import Music from '../music/Music';
 import Settings from '../settings/Settings';
+import MessagesContainer from '../messages/MessagesContainer';
 
 const App = (props) => {
   return (
@@ -16,8 +16,8 @@ const App = (props) => {
         <Header />
         <Navigation />
         <Routes>
-          <Route path='/profile' element={<Profile posts={props.state.profilePage.posts} newPostText={props.state.profilePage.newPostText} dispatch={props.dispatch} />} />
-          <Route path='/messages' element={<Messages messages={props.state.messagesPage.messages} chat={props.state.messagesPage.chat} newMessageText={props.state.messagesPage.newMessageText} dispatch={props.dispatch} />} />
+          <Route path='/profile' element={<Profile store={props.store} />} />
+          <Route path='/messages' element={<MessagesContainer store={props.store} />} />
           <Route path='/news' element={<News/>} />
           <Route path='/music' element={<Music/>} />
           <Route path='/settings' element={<Settings/>} />

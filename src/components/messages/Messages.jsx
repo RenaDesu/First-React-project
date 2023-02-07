@@ -2,26 +2,26 @@ import React from 'react';
 import ChatMessage from './chat-message/ChatMessage';
 import MessagesListItem from './messages-list-item/MessagesListItem';
 import './Messages.css';
-import { updateNewMessageTextCreator, sendMessageCreator } from '../../redux/messages-reducer';
 
 const Messages = (props) => {
 
-    let messagesListElements = props.messages
+    let state = props.messagesPage;
+
+    let messagesListElements = state.messages
         .map(element => <MessagesListItem name={element.name} id={element.id} />);
 
-    let chatMessageElements = props.chat
+    let chatMessageElements = state.chat
         .map(element => <ChatMessage text={element.text} />);
 
     let newMessageElement = React.createRef();
 
-    let onSendMessageClick = () => {
-        props.dispatch(sendMessageCreator())
+    const onSendMessageClick = () => {
+        props.sendMessage();
     }
 
-    let onNewMessageChange = () => {
+    const onNewMessageChange = () => {
         let text = newMessageElement.current.value;
-        let action = updateNewMessageTextCreator(text);
-        props.dispatch(action);
+        props.updateNewMessageText(text);
     }
 
     return (
@@ -38,7 +38,7 @@ const Messages = (props) => {
                     {chatMessageElements}
                 </ul>
                 <form className='chat__form'>
-                    <textarea className='chat__message-field' onChange={onNewMessageChange} ref={newMessageElement} name="message-field" id="message-field" value={props.newMessageText} placeholder='Введите сообщение'></textarea>
+                    <textarea className='chat__message-field' onChange={onNewMessageChange} ref={newMessageElement} name="message-field" id="message-field" value={state.newMessageText} placeholder='Введите сообщение'></textarea>
                     <button className='chat__button' onClick={onSendMessageClick} type='button' >Отправить сообщение</button>
                 </form>
             </section>
